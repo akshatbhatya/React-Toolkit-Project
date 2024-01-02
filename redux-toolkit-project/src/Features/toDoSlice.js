@@ -9,3 +9,5 @@ const initialState={
         }
     ]
 }
+
+console.log(initialState);
