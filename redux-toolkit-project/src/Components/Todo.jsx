@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+
 import { useDispatch, useSelector } from 'react-redux'
-import { addTodo, removeTodo } from '../Features/toDoSlice'
+import { removeTodo } from '../Features/toDoSlice'
 
 
 
@@ -13,16 +13,22 @@ function Todo() {
     return (
 
         <>
+            <h2>loop</h2>
 
-            {
-                todos.map((todo) => {
-                    <div key={todo.id}>
-                        <input type="text" value={todo} readOnly />
-                        <button onClick={() => dispatch(removeTodo(todo.id))}>delete</button>
-                    </div>
-                })
-            }
+            <div>
 
+                {
+                    todos.map((todo) => {
+
+                      return  <div key={todo.id}>
+                            <input type="text" value={todo.text} readOnly />
+                            <button onClick={() => dispatch(removeTodo(todo.id))}>Delete</button>
+                            <br />
+                        </div>
+                        
+                    })
+                }
+            </div>
         </>
     )
 }

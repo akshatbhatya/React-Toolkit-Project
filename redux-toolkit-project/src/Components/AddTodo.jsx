@@ -7,7 +7,6 @@ function AddTodo() {
     const dispatch = useDispatch()
 
     const [input, setInput] = useState(" ")
-    console.log(input);
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(addTodo(input))
@@ -23,7 +22,7 @@ function AddTodo() {
                     onChange={((e) => setInput(e.currentTarget.value))}
 
                 />
-                <button type={'submit'} onClick={submitHandler}>delete</button>
+                <button type={'submit'}>Add</button>
             </form>
         </div>
     )
