@@ -1,11 +1,14 @@
 import './App.css'
+import AddTodo from './Components/AddTodo'
+import Todo from './Components/todo'
 
 function App() {
 
 
   return (
     <>
-    learn redux 
+    <AddTodo/>
+    <Todo/>
     
     </>
   )
